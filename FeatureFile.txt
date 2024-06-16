@@ -1,0 +1,191 @@
+Feature: Automation Testing For Letcode Website
+
+@Input
+Scenario: User Filling The Input Module
+Given user Launch The Letcode Website
+When user Go To Input Module Click The Edit Button
+And user Enter The Fullname In Enter Your Full Name Field
+And user Append The Text In Append a Text And Press Keyboard Tab Field
+And user Clear The Inside Text Box 
+And user Enter The Inside Text Box
+And user Again Clear The Text 
+And user Again Enter The Text
+And user Check The Field Is Disabled Or Not
+Then user Navigate To The Back Page And Handle The Select Module
+
+@Dropdown
+Scenario: User Handle The Dropdown Module
+When user Go To Select Module Click The Dropdown Button
+And user Get The All Options In First Single Dropdown
+And user Get The All Options In Second Multiple Dropdown
+And user Get The All Options In Third Single Dropdown
+And user Get The All Options In Fourth Single Dropdown
+And user Select The Mango In First Single Dropdown
+And user Select The Robin In Second Multiple Dropdown
+And user Select The Java In Third Single Dropdown
+And user Select The India In Fourth Single Dropdown
+And user Again Select The Banana In First Single Dropdown
+And user Again Select The Iron Man In Second Multiple Dropdown
+And user Again Select The JavaScript In Third Single Dropdown
+And user Again Select The Brazil In Fourth Single Dropdown
+Then user Navigate To The Back Page And Handle The Alert Module
+
+@Alert
+Scenario: User Handle The Alert Module
+When user Go To Alert Module Click The Diolog Button
+And user Click The Simple Alert Box And Handle The Simple Alert
+And user Click The Confirm Alert Box And Handle The Confirm Alert
+And user Click The Prompt Alert Box And Handle The Prompt Alert
+And user uses a Java Script Executor
+And user Click The Modern Alert Box
+And user Click The Modern Alert Cancel Button
+Then user Navigate To The Back Page And Handle The Frame Module
+
+@Frame
+Scenario: User Handle The Frame Module
+When user First Time uses a Java Script Executor
+And user Go To Frame Module Click The Inner Html Button
+And user Switch To First Frame
+And user Enter The First Name In First Name Field
+And user Enter The Last Name In Last Name Field
+And user Switch To second Frame
+And user use In Java Scriptt Executor
+And user Enter The Email In Email Box
+And user Switch To The Parent Frame
+And user Clear The First Name In First Name Field
+And user Second Time Enter The First Name In First Name Field
+And user Clear The Last Name In Last Name Field
+And user Second Time Enter The Last Name In last Name Field
+And user Again Switch To Child Frame
+And user Clear The Email In Email Box
+And user Second Time Enter The Email In Email Box
+And user Second Time Switch To The Parent Frame
+And user Second Time Clear The First Name In First Name Field
+And user Third Time Enter The First Name In First Name Field
+And user Switch To Default Content
+And user Click The Watch Tutorial Button
+And user Navigate To The Back 
+Then user Navigate To The Back Page And Handle The Radio  Module
+
+@RadioButtons
+Scenario: User Handle The Radio Module
+When user Second Time uses a Java Script Executor
+And user Go To Radio Module Click The ToggleClick Button
+And user Click The First Radio Button
+And user Click The Second Radio Button
+And user Click The Third Radio Button
+And user Verify The Third RadioButton Clickable Or Not
+And user Verify The Fourth RadioButton Clickable Or Not
+And user Third Time uses a Java Script Executor
+And user Click The First Check Box
+And user Click The Second Check Box
+And user Fourth Time uses a Java Script Executor
+And user Click The Watch TutorialButton
+And user Second Time Navigate To Back Page
+Then user Navigate To The Back Page And Handle The Window  Module
+
+@WindowHandling
+Scenario: User Handle The Window Module
+When user Fifth Time uses a Java Script Executor
+And user Go To Window Module Click The TabButton
+And user Click The GoTo HomeButton
+And user Handle The Window
+And user Sixth Time uses a Java Script Executor
+And user Again Go To Window Module Click The TabButton
+And user Click The Multiple Window Button
+And user Second Time Handle The Window
+And user Create The Action Class Using Move To Element Method
+And user Click The Java Selenium Option
+And user Third Time Navigate To Back Page
+And user Close The Driver
+And user Third Time Handle The Window
+And user Second Time Click The GoTo HomeButton
+And user Fourth Time Navigate To Back Page
+And user Second Time Close The Driver
+And user Fourth Time Handle The Window
+And user Seventh Time uses a Java Script Executor
+And user Second Time Click The Watch Tutorial Button
+Then user Fifth Time Navigate To Back Page And Click The Work Space Module
+
+@DropDown
+Scenario: User Handle The Drag And Drop Module
+When user Click The Work Space Module
+And user Eighth Time uses a Java Script Executor
+And user Click The Drag Module
+And user Drag The Image Using Actions Class With DragAndDropBy Method
+And user Sixth Time Navigate To Back Page
+And user Nineth Time uses a Java Script Executor
+And user Click The Drop Module
+And user Drag And Drop The Image Using Actions Class With DragAndDrop Method
+Then user Seventh Time Navigate To Back Page And Click The Table Module
+
+@SimpleTable
+Scenario: User Handle The Table Module
+When user nineth Time uses a Java Script Executor
+And user Click The Table Module
+And user Get The All Data In First Table
+And user Get The All Data In Second Table
+And user Get The All Data In Third Table
+And user Get The Header In First Table
+And user Get The Header In Second Table
+And user Get The Header In Third Table
+And user Get The All Rows In First Table
+And user Get The All Rows In Second Table
+And user Get The All Rows In Third Table
+And user Get The Particular Row In First Table
+And user Get The Particular Row In Second Table
+And user Get The Particular Row In Third Table
+And user Get The Particular Data In First Table
+And user Get The Particular Data In Second Table
+And user Get The Particular Data In Third Table
+Then user Eighth Time Navigate To Back Page And Click The Advance Table Module
+
+@AdvanceTable
+Scenario: User Handle The Advance Table Module
+When user Tenth Time uses a Java Script Executor
+And user Click The Advance Table Module
+And user Get The First Column In The Table
+And user Get The Second Column In The Table
+And user Get The Third Column In The Table
+And user Get The Fourth Column In The Table
+Then user Eleventh Time Navigate To Back Page And Click The Calender Module
+
+@Calender
+Scenario: User Handle The Calender Module
+When user Eleventh Time uses a Java Script Executor
+And user Click The Calender Module
+And user Click The June Month
+And user Select The June Twelth Date
+And user Set The Time
+And user Get The Selected June Month Date And Time
+And user Twelth Time Navigate To Back Page
+And user Twelth Time uses a Java Script Executor
+And user Second Time Click The Calender Module
+And user Click The April Month
+And user Select The April Tenth Date
+And user Last Time uses a Java Script Executor
+And user Second Time Set The Time
+And user get The Selected April Month Date And Time
+Then user Thirteenth Time Navigate To Back Page And Click The Forms Module
+
+
+@FormFilling
+Scenario: User Handle The Forms Module
+When user Thirteenth Time uses a Java Script Executor
+And user Click The Forms Module
+And user Enter The First Namee In First Name Field
+And user Enter The Last Namee In First Name Field
+And user Clear The Email Namee Field
+And user Enter The Email Namee In Email Name Field
+And user Select The Country Code Using Drop Down
+And user Enter The Phone Number In Phone Number Field 
+And user Enter The Address In First Address Field 
+And user Enter The Address In Second Address Field 
+And user Enter The State In State Field
+And user Fourteenth Time uses a Java Script Executor
+And user Enter The Postal Code In Postal Code Field
+And user Select The Country Using Drop Down
+And user Enter The Date Of Birth In Date Of Birth Field
+And user Select The Gender Using RadioButton
+And user Click The CheckBoxs In Click
+Then user Click The Submit Button
