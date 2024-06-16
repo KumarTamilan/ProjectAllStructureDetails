@@ -1,0 +1,130 @@
+package com.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class FormPage {
+	
+	public static WebDriver driver;
+
+	@FindBy(xpath = "//input[@id='firstname']")
+	private WebElement firstNameField;
+	
+	@FindBy(xpath = "//input[@id='lasttname']")
+	private WebElement lastNameField;
+	
+	@FindBy(xpath = "//input[@id='email']")
+	private WebElement emailFieldClear;
+	
+	@FindBy(xpath = "//input[@id='email']")
+	private WebElement emailFieldEnter;
+	
+	@FindBy(xpath = "(//select)[1]")
+	private WebElement selectCountryCode;
+	
+	@FindBy(xpath = "//input[@id='Phno']")
+	private WebElement phoneNumber;
+	
+	@FindBy(xpath = "//input[@id='Addl1']")
+	private WebElement address1;
+	
+	@FindBy(xpath = "//input[@id='Addl2']")
+	private WebElement address2;
+	
+	@FindBy(xpath = "//input[@id='state']")
+	private WebElement state;
+	
+	@FindBy(xpath = "//input[@id='postalcode']")
+	private WebElement postalCode;
+	
+	@FindBy(xpath = "(//select)[2]")
+	private WebElement selectCountry;
+	
+	@FindBy(xpath = "//input[@type='date']")
+	private WebElement dateOfBirth;
+	
+	@FindBy(xpath = "(//input[@type='radio'])[1]")
+	private WebElement selectGender;
+	
+	@FindBy(xpath = "(//input[@type='checkbox'])[1]")
+	private WebElement checkBoxClick;
+	
+	@FindBy(xpath = "(//input[@type='submit'])[1]")
+	private WebElement submitClick;
+	
+	
+
+	
+	public FormPage(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+
+	public WebElement getFirstNameField() {
+		return firstNameField;
+	}
+
+	public WebElement getLastNameField() {
+		return lastNameField;
+	}
+
+	public WebElement getEmailFieldClear() {
+		return emailFieldClear;
+	}
+
+	public WebElement getEmailFieldEnter() {
+		return emailFieldEnter;
+	}
+
+	public WebElement getSelectCountryCode() {
+		return selectCountryCode;
+	}
+
+	public WebElement getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public WebElement getAddress1() {
+		return address1;
+	}
+
+	public WebElement getAddress2() {
+		return address2;
+	}
+
+	public WebElement getState() {
+		return state;
+	}
+
+	public WebElement getPostalCode() {
+		return postalCode;
+	}
+
+	public WebElement getSelectCountry() {
+		return selectCountry;
+	}
+
+	public WebElement getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public WebElement getSelectGender() {
+		return selectGender;
+	}
+
+	public WebElement getCheckBoxClick() {
+		return checkBoxClick;
+	}
+
+	public WebElement getSubmitClick() {
+		return submitClick;
+	}
+	
+	
+	
+	
+}
