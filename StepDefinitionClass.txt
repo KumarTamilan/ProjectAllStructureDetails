@@ -1,0 +1,123 @@
+package com.mavenpro.stepdefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.baseclass.BaseClass;
+import com.mavenpro.runner.TestRunner;
+import com.pom.FormPage;
+import com.sdp.PageObjectManager;
+import com.utilities.FileReaderManager;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class StepDefinition extends BaseClass{
+	
+	public static WebDriver driver = TestRunner.driver;
+	public static PageObjectManager pom = new PageObjectManager(driver);
+	
+	
+	@When("^user Enter The Letcode Url$")
+	public void user_Enter_The_Letcode_Url() throws Throwable {
+		String url = FileReaderManager.getInstance().getInstanceCR().getUrl();
+		driver=getUrl(url);
+	}
+	
+
+	@When("^user Enter The First Namee In First Name Field$")
+	public void user_Enter_The_First_Namee_In_First_Name_Field() throws Throwable {
+		String firstName = FileReaderManager.getInstance().getInstanceCR().getFirstName();
+		inputValueElement(pom.getFp().getFirstNameField(), firstName);
+	}
+
+	@When("^user Enter The Last Namee In First Name Field$")
+	public void user_Enter_The_Last_Namee_In_First_Name_Field() throws Throwable {
+		String lastName = FileReaderManager.getInstance().getInstanceCR().getLastName();
+		inputValueElement(pom.getFp().getLastNameField(), lastName);
+	}
+
+	@When("^user Clear The Email Namee Field$")
+	public void user_Clear_The_Email_Namee_Field() throws Throwable {
+		clickOnElement(pom.getFp().getEmailFieldClear());
+	}
+
+	@When("^user Enter The Email Namee In Email Name Field$")
+	public void user_Enter_The_Email_Namee_In_Email_Name_Field() throws Throwable {
+		String email = FileReaderManager.getInstance().getInstanceCR().getEmail();
+		inputValueElement(pom.getFp().getEmailFieldEnter(), email);
+	}
+
+	@When("^user Select The Country Code Using Drop Down$")
+	public void user_Select_The_Country_Code_Using_Drop_Down() throws Throwable {
+		String countryCode = FileReaderManager.getInstance().getInstanceCR().getCountryCode();
+		dropDown("byVisibleText", pom.getFp().getSelectCountryCode(), countryCode);
+	}
+
+	@When("^user Enter The Phone Number In Phone Number Field$")
+	public void user_Enter_The_Phone_Number_In_Phone_Number_Field() throws Throwable {
+		String phoneNumber = FileReaderManager.getInstance().getInstanceCR().getPhoneNumber()
+;		inputValueElement(pom.getFp().getPhoneNumber(), phoneNumber);	
+	}
+
+	@When("^user Enter The Address In First Address Field$")
+	public void user_Enter_The_Address_In_First_Address_Field() throws Throwable {
+		String firstAddress = FileReaderManager.getInstance().getInstanceCR().getFirstAddress();
+		inputValueElement(pom.getFp().getAddress1(), firstAddress);
+	}
+
+	@When("^user Enter The Address In Second Address Field$")
+	public void user_Enter_The_Address_In_Second_Address_Field() throws Throwable {
+		String secondAddress = FileReaderManager.getInstance().getInstanceCR().getSecondAddress();
+		inputValueElement(pom.getFp().getAddress2(), secondAddress);
+	}
+
+	@When("^user Enter The State In State Field$")
+	public void user_Enter_The_State_In_State_Field() throws Throwable {
+		String state = FileReaderManager.getInstance().getInstanceCR().getState();
+		inputValueElement(pom.getFp().getState(), state);
+	}
+
+	@When("^user Fourteenth Time uses a Java Script Executor$")
+	public void user_Fourteenth_Time_uses_a_Java_Script_Executor() throws Throwable {
+		String javaScriptExecutorValue = FileReaderManager.getInstance().getInstanceCR().getJavaScriptExecutorValue();
+		javaScriptExecuter(javaScriptExecutorValue);
+	}
+
+	@When("^user Enter The Postal Code In Postal Code Field$")
+	public void user_Enter_The_Postal_Code_In_Postal_Code_Field() throws Throwable {
+		String postalCode = FileReaderManager.getInstance().getInstanceCR().getPostalCode();
+		inputValueElement(pom.getFp().getPostalCode(), postalCode);
+	}
+
+	@When("^user Select The Country Using Drop Down$")
+	public void user_Select_The_Country_Using_Drop_Down() throws Throwable {
+		String country = FileReaderManager.getInstance().getInstanceCR().getCountry();
+		dropDown("byVisibleText", pom.getFp().getSelectCountry(), country);
+	}
+
+	@When("^user Enter The Date Of Birth In Date Of Birth Field$")
+	public void user_Enter_The_Date_Of_Birth_In_Date_Of_Birth_Field() throws Throwable {
+		String dateOfBirth = FileReaderManager.getInstance().getInstanceCR().getDateOfBirth();
+		inputValueElement(pom.getFp().getDateOfBirth(), dateOfBirth);
+	}
+
+	@When("^user Select The Gender Using RadioButton$")
+	public void user_Select_The_Gender_Using_RadioButton() throws Throwable {
+		clickOnElement(pom.getFp().getSelectGender());
+	}
+
+	@When("^user Click The CheckBoxs In Click$")
+	public void user_Click_The_CheckBoxs_In_Click() throws Throwable {
+		clickOnElement(pom.getFp().getCheckBoxClick());
+	}
+
+	@Then("^user Click The Submit Button$")
+	public void user_Click_The_Submit_Button() throws Throwable {
+		clickOnElement(pom.getFp().getSubmitClick());
+	}
+
+
+}
