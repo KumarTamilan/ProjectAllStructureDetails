@@ -1,0 +1,14 @@
+browser=chrome
+url=https://letcode.in/forms
+firstName=Kumaran
+lastName=Karuppannan
+email=kumaran@gmail.com
+countryCode=India (+91)
+phoneNumber=9578608914
+firstAddress=Mettur
+secondAddress=Salem
+state=Tamilnadu
+javaScriptExecutorValue=window.scrollBy(0,400);
+postalCode=636453
+country=India
+dateOfBirth=12-03-1994
